@@ -1,5 +1,7 @@
 <?php
 
+require_once "Custom-Meta-Boxes/custom-meta-boxes.php";
+
 add_filter( 'cmb_meta_boxes', 'cmb_sample_metaboxes' );
 /**
  * Define the metabox and field configurations.
@@ -33,7 +35,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 
 		)
 	);
-	
+
 	// Posts Select meta boxe
 	$meta_boxes[] = array(
 		'title' => 'Posts Select',
@@ -43,41 +45,41 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
 
-			array( 
-				'id' => 'select-posts', 
-				'name' => 'Single Posts Select', 
-				'type' => 'post_select', 
-				'cols' => 6, 
-				'allow_none' => true, 
+			array(
+				'id' => 'select-posts',
+				'name' => 'Single Posts Select',
+				'type' => 'post_select',
+				'cols' => 6,
+				'allow_none' => true,
 				'multiple' => false,
 				'query' => 'showposts=1'
 			),
 
-			array( 
-				'id' => 'select-multiple', 
-				'name' => 'Multiple Posts Select', 
-				'type' => 'post_select', 
-				'cols' => 6, 
-				'allow_none' => true, 
-				'multiple' => true 
+			array(
+				'id' => 'select-multiple',
+				'name' => 'Multiple Posts Select',
+				'type' => 'post_select',
+				'cols' => 6,
+				'allow_none' => true,
+				'multiple' => true
 			),
 
-			array( 
-				'id' => 'select-posts-ajax', 
-				'name' => 'Single Posts Ajax Select', 
-				'type' => 'post_select', 
-				'cols' => 6, 
-				'allow_none' => true, 
+			array(
+				'id' => 'select-posts-ajax',
+				'name' => 'Single Posts Ajax Select',
+				'type' => 'post_select',
+				'cols' => 6,
+				'allow_none' => true,
 				'multiple' => false ,
 				'use_ajax' => true
 			),
 
-			array( 
-				'id' => 'select-multiple-ajax', 
-				'name' => 'Mutliple Posts Ajax Select', 
-				'type' => 'post_select', 
-				'cols' => 6, 
-				'allow_none' => true, 
+			array(
+				'id' => 'select-multiple-ajax',
+				'name' => 'Mutliple Posts Ajax Select',
+				'type' => 'post_select',
+				'cols' => 6,
+				'allow_none' => true,
 				'multiple' => true,
 				'use_ajax' => true
 			)
@@ -93,13 +95,13 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
 
-			array( 
-				'id' => 'simple-group', 
-				'name' => 'Simple Repeatable Group', 
-				'type' => 'group', 
-				'cols' => 12, 
+			array(
+				'id' => 'simple-group',
+				'name' => 'Simple Repeatable Group',
+				'type' => 'group',
+				'cols' => 12,
 				'repeatable' => true,
-				'fields' => array( 
+				'fields' => array(
 					array(
 						'id' => 'simple-group-text',
 						'type' => 'text'
