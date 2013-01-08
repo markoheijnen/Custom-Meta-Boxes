@@ -4,9 +4,21 @@
 
 Custom Meta Boxes is a fork (non backwards compatible) of jaradatch's great https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress. 
 
+## Usage
+
+```bash
+$ cd your-theme-or-plugin
+$ git clone https://github.com/markoheijnen/Custom-Meta-Boxes
+$ cd  Custom-Meta-Boxes
+$ git submodule init 
+$ git submodule update
+```
+
+```example-functions.php``` Is a good starter for your own meta-boxes.
+
 ## Why fork?
 
-We really liked the idea of the original Custom Metaboxes, but were not so keen on the implementation. That's not to say it wasn't good, it's just not how we envisioned somethign like working from an API point of view.
+We really liked the idea of the original Custom Metaboxes, but were not so keen on the implementation. That's not to say it wasn't good, it's just not how we envisioned something like working from an API point of view.
 
 This fork attemps to make the framework much more modular, taking a more Object Orientated approach. Though the original CMB does use Classes it's in a fairly basic (simiilar to a lot of the Classes in WordPress it's self). In this fork, each field type is an extension of the `abstract class` `CMB_Field`. This makes maintability and extension much easier and also makes writing tests a lot better.
 

@@ -377,7 +377,7 @@ class CMB_Image_Field extends CMB_Field {
 		</div>
 
 		<div style="<?php echo $style ?>" class="loading-block hidden">
-			<img src="<?php echo get_bloginfo( 'template_url' ).'/framework/assets/images/spinner.gif'; ?>" />
+			<img src="<?php echo CMB_URL .'/js/select2/spinner.gif'; ?>" />
 		</div>
 		<?php
 
@@ -1066,7 +1066,7 @@ class CMB_Group_Field extends CMB_Field {
 
 	public function html() {
 
-		
+
 		$value = $this->value;
 
 		if ( ! empty( $value ) ) {
@@ -1074,7 +1074,7 @@ class CMB_Group_Field extends CMB_Field {
 				if ( ! empty( $field ) && ! empty( $this->fields[$field] ) )
 					$this->fields[$field]->set_values( (array) $field_value );
 				else if ( ! empty( $this->fields[$field] ) )
-					$this->fields[$field]->set_values( array() );		
+					$this->fields[$field]->set_values( array() );
 		} else {
 			foreach ( $this->fields as $field ) {
 				$field->set_values( array() );
